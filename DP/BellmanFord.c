@@ -4,9 +4,9 @@ int parent[SIZE];
 int distance[SIZE];
 int weight[SIZE][SIZE]={    
     {0,4,7,9,8},
-    {4,0,10,0,0},
-    {7,10,0,5,0},
-    {9,0,5,0,6},
+    {4,0,1,0,0},
+    {7,1,0,2,0},
+    {9,0,2,0,6},
     {8,0,0,6,0},
 };
 
@@ -45,7 +45,7 @@ void main() {
     }
     
     printf("The graph does not have a negative cycle\n");
-    for (int i = 0; i < SIZE; i++) {
-        printf("Distance: %d Parent: %d\n", distance[i], parent[i]);
+    for (int i = 1; i < SIZE; i++) {
+        printf("Vertex:%d Distance:%d Parent:%d\n", i,distance[i], parent[i]);
     }
 }

@@ -17,13 +17,13 @@ void bubblesort(vector<int>& arr){
 void selectionsort(vector<int>& arr){
     int n = arr.size();
     for(int i=0;i<n;i++){
-        int smallest = arr[i];
+        int si = i;
         for(int j=i+1;j<n;j++){
-            if(arr[j]<smallest){
-                smallest = arr[j];
+            if(arr[j]<arr[si]){
+                si = j;
             }
         }
-        swap(arr[i],smallest);
+        swap(arr[i],arr[si]);
     }
 }
 
